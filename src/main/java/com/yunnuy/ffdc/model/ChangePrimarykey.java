@@ -5,9 +5,6 @@ import java.util.Date;
 
 import javax.persistence.Embeddable;
 
-import lombok.Data;
-
-@Data
 @Embeddable
 public class ChangePrimarykey implements Serializable {
 
@@ -18,4 +15,28 @@ public class ChangePrimarykey implements Serializable {
 	private String fullname;
 	
 	private Date changeDate;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getFullname() {
+		return fullname;
+	}
+
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
+	}
+
+	public Date getChangeDate() {
+		return changeDate;
+	}
+
+	public void setChangeDate(Date changeDate) {
+		this.changeDate = changeDate;
+	}
 }
